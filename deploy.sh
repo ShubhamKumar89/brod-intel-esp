@@ -5,12 +5,12 @@ if [[ $(id -u) -ne 0 ]]; then
     exit 1
 fi
 
-if ! command -v <docker> &> /dev/null; then
+if ! command -v docker >/dev/null 2>&1; then
     echo -e "\e[1m\e[31;1m Please install docker! \e[0m"
     exit 1
 fi
 
-if ! command -v <docker-compose> &> /dev/null; then
+if ! command -v docker-compose >/dev/null 2>&1; then
     echo -e "\e[1m\e[31;1m Please install docker-compose! \e[0m"
     exit 1
 fi
