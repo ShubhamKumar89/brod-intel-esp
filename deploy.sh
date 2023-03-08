@@ -17,5 +17,5 @@ fi
 
 mkdir -p /opt/esp && \
 cd /opt/esp && \
-wget -O /opt/esp/docker-compose.yml https://raw.githubusercontent.com/brod-intel/esp/main/docker-compose.yml && \
+wget -qO /opt/esp/docker-compose.yml https://raw.githubusercontent.com/brod-intel/esp/main/docker-compose.yml && \
 docker-compose up -d
