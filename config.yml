@@ -13,7 +13,7 @@
 # network_gateway_ip: 192.168.1.1
 
 # If omitted, this is automatically determined
-host_ip: esp.ip-pulse.net
+host_ip: espcloud-eaas.westus.cloudapp.azure.com
 
 # If omitted, defaults to 8.8.8.8
 # Note that the primary DNS is always host_ip
@@ -22,7 +22,7 @@ host_ip: esp.ip-pulse.net
 
 # Let's Encrypt Certificates TLS for Web Services
 letsencrypt_enabled: true
-letsencrypt_email: comms@bryanrodriguez.com     
+letsencrypt_email: bryan.j.rodriguez@intel.com
 # This specifies that you agree to ACME’s Subscriber Agreement.
 letsencrypt_agree_to: true
 # This tells Certbot that you do not wish to share your email with the Electronic Frontier Foundation (EFF).
@@ -81,6 +81,24 @@ profiles:
     git_token: ""
     # This is the name that will be shown on the PXE menu (NOTE: No Spaces)
     name: System_Debug
+    custom_git_arguments: --depth=1
+    
+  - git_remote_url: https://github.com/brod-intel/profile_zerolinux.git
+    profile_branch: waiting-room
+    profile_base_branch: None
+    git_username: ""
+    git_token: ""
+    # This is the name that will be shown on the PXE menu (NOTE: No Spaces)
+    name: Zero_Linux_waiting-room
+    custom_git_arguments: --depth=1
+    
+  - git_remote_url: https://github.com/brod-intel/profile_zerolinux.git
+    profile_branch: main
+    profile_base_branch: None
+    git_username: ""
+    git_token: ""
+    # This is the name that will be shown on the PXE menu (NOTE: No Spaces)
+    name: Zero_Linux
     custom_git_arguments: --depth=1
 
   - git_remote_url: https://github.com/intel-collab/applications.provisioning.esp.profiles.ubuntu.git
